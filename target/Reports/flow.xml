@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="48.121693">
+    <testcase classname="To validate flow of booking" name="To validate booking flow of room" time="26.214634">
+        <system-out><![CDATA[Given user should be on login page..........................................passed
+When user should give username and password.................................passed
+And user select "London",hotel,room type....................................passed
+And no of rooms.............................................................passed
+And user enter checkin,checkout.............................................passed
+And user enter adult, child and click.......................................passed
+And user select hotel and click continue....................................passed
+And user enter firstname,lastname,address...................................passed
+And user enter card no,card type,expmonth,expyear,cvv and click book........passed
+Then User should be in booking confirmation page............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="To validate flow of booking" name="To validate booking flow of room 2" time="21.907059">
+        <system-out><![CDATA[Given user should be on login page..........................................passed
+When user should give username and password.................................passed
+And user select "Melbourne",hotel,room type.................................passed
+And no of rooms.............................................................passed
+And user enter checkin,checkout.............................................passed
+And user enter adult, child and click.......................................passed
+And user select hotel and click continue....................................passed
+And user enter firstname,lastname,address...................................passed
+And user enter card no,card type,expmonth,expyear,cvv and click book........passed
+Then User should be in booking confirmation page............................passed
+]]></system-out>
+    </testcase>
+</testsuite>

@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src\\test\\resources\\Features\\Flow.feature",dryRun = false,glue = "org.step",plugin = {"junit:target\\Reports\\flow.xml"})
+@CucumberOptions(features = "src\\test\\resources\\Features\\Flow.feature",dryRun = true,glue = "org.step",plugin = {"junit:target\\Reports\\flow.xml"})
 public class RunnerClass {
 
 }

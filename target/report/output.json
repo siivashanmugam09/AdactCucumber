@@ -1,0 +1,551 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-04-15T05:03:18.028Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2156100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.browserLaunch()"
+            }
+          }
+        ],
+        "line": 34,
+        "name": "To validate booking flow of room",
+        "description": "",
+        "id": "to-validate-flow-of-booking;to-validate-booking-flow-of-room;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 617508900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.snap(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6574062600,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "user should be on login page",
+            "match": {
+              "location": "Flow.user_should_be_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5389877900,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user should give username and password",
+            "match": {
+              "location": "Flow.user_should_give_username_and_password(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "siva090195",
+                  "siva090195"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 518850400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user select \"London\",hotel,room type",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"London\"",
+                  "offset": 12
+                }
+              ],
+              "location": "Flow.user_select_hotel_room_type(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Hotel Creek",
+                  "Hotel Sunshine",
+                  "Hotel Hervey",
+                  "Hotel Cornice"
+                ]
+              },
+              {
+                "cells": [
+                  "Standard",
+                  "Double",
+                  "Deluxe",
+                  "Super Deluxe"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 88348300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "no of rooms",
+            "match": {
+              "location": "Flow.no_of_rooms(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "1 - One",
+                  "2 - Two",
+                  "3 - Three"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 403166700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enter checkin,checkout",
+            "match": {
+              "location": "Flow.user_enter_checkin_checkout(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "21/04/2021"
+                ]
+              },
+              {
+                "cells": [
+                  "22/04/2021"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1405438600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user enter adult, child and click",
+            "match": {
+              "location": "Flow.user_enter_adult_child_and_click(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "1 - One",
+                  "2 - Two"
+                ]
+              },
+              {
+                "cells": [
+                  "0 - None",
+                  "1 - One"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1299432000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user select hotel and click continue",
+            "match": {
+              "location": "Flow.user_select_hotel_and_click_continue()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 363123700,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user enter firstname,lastname,address",
+            "match": {
+              "location": "Flow.user_enter_firstname_lastname_address(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "firstname",
+                  "siva"
+                ]
+              },
+              {
+                "cells": [
+                  "lastname",
+                  "shanmugam"
+                ]
+              },
+              {
+                "cells": [
+                  "address",
+                  "495,east"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 917234700,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user enter card no,card type,expmonth,expyear,cvv and click book",
+            "match": {
+              "location": "Flow.user_enter_card_no_card_type_expmonth_expyear_cvv_and_click_book(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardno",
+                  "type",
+                  "month",
+                  "year",
+                  "cvv"
+                ]
+              },
+              {
+                "cells": [
+                  "1234567890123456",
+                  "VISA",
+                  "June",
+                  "2022",
+                  "786"
+                ]
+              },
+              {
+                "cells": [
+                  "7894561230123456",
+                  "VISA",
+                  "June",
+                  "2021",
+                  "786"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10097819900,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "User should be in booking confirmation page",
+            "match": {
+              "location": "Flow.user_should_be_in_booking_confirmation_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-15T05:03:45.820Z",
+        "before": [
+          {
+            "result": {
+              "duration": 159700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.browserLaunch()"
+            }
+          }
+        ],
+        "line": 35,
+        "name": "To validate booking flow of room",
+        "description": "",
+        "id": "to-validate-flow-of-booking;to-validate-booking-flow-of-room;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 450316000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.snap(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 16772212300,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "user should be on login page",
+            "match": {
+              "location": "Flow.user_should_be_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4246367700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user should give username and password",
+            "match": {
+              "location": "Flow.user_should_give_username_and_password(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "siva090195",
+                  "siva090195"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 312560000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user select \"Melbourne\",hotel,room type",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Melbourne\"",
+                  "offset": 12
+                }
+              ],
+              "location": "Flow.user_select_hotel_room_type(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Hotel Creek",
+                  "Hotel Sunshine",
+                  "Hotel Hervey",
+                  "Hotel Cornice"
+                ]
+              },
+              {
+                "cells": [
+                  "Standard",
+                  "Double",
+                  "Deluxe",
+                  "Super Deluxe"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 67762900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "no of rooms",
+            "match": {
+              "location": "Flow.no_of_rooms(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "1 - One",
+                  "2 - Two",
+                  "3 - Three"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 298143600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enter checkin,checkout",
+            "match": {
+              "location": "Flow.user_enter_checkin_checkout(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "21/04/2021"
+                ]
+              },
+              {
+                "cells": [
+                  "22/04/2021"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1369375100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user enter adult, child and click",
+            "match": {
+              "location": "Flow.user_enter_adult_child_and_click(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "1 - One",
+                  "2 - Two"
+                ]
+              },
+              {
+                "cells": [
+                  "0 - None",
+                  "1 - One"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1438319500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user select hotel and click continue",
+            "match": {
+              "location": "Flow.user_select_hotel_and_click_continue()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 282802400,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user enter firstname,lastname,address",
+            "match": {
+              "location": "Flow.user_enter_firstname_lastname_address(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "firstname",
+                  "siva"
+                ]
+              },
+              {
+                "cells": [
+                  "lastname",
+                  "shanmugam"
+                ]
+              },
+              {
+                "cells": [
+                  "address",
+                  "495,east"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 581791600,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user enter card no,card type,expmonth,expyear,cvv and click book",
+            "match": {
+              "location": "Flow.user_enter_card_no_card_type_expmonth_expyear_cvv_and_click_book(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardno",
+                  "type",
+                  "month",
+                  "year",
+                  "cvv"
+                ]
+              },
+              {
+                "cells": [
+                  "1234567890123456",
+                  "VISA",
+                  "June",
+                  "2022",
+                  "786"
+                ]
+              },
+              {
+                "cells": [
+                  "7894561230123456",
+                  "VISA",
+                  "June",
+                  "2021",
+                  "786"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10068012900,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "User should be in booking confirmation page",
+            "match": {
+              "location": "Flow.user_should_be_in_booking_confirmation_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "To validate flow of booking",
+    "description": "",
+    "id": "to-validate-flow-of-booking",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/Flow.feature",
+    "tags": []
+  }
+]

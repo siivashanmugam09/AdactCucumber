@@ -44,6 +44,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.pojo.PojoClass;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import net.masterthought.cucumber.Configuration;
+import net.masterthought.cucumber.ReportBuilder;
 
 public class BaseClass {
 	public static WebDriver driver;
@@ -479,7 +481,22 @@ public class BaseClass {
 		driver.manage().deleteAllCookies();
 	}
 
-	private void impliwait() {
+	public static void impliwait() {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+	
+	public static void generate(String jsonpath) {
+File f = new File(System.getProperty("user.dir")+"\\target\\Reports\\jvmreport");
+Configuration con = new Configuration(f, "Adactin");
+con.addClassifications("platform name", "windows10");
+con.addClassifications("browsername", "chrome");
+con.addClassifications("browserversion", "89.0");
+con.addClassifications("sprint number", "154");
+
+List<String> li = new ArrayList<String>();
+li.add(jsonpath);
+ReportBuilder r = new ReportBuilder(li, con);
+r.generateReports();
+
 	}
 }

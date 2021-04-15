@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="48.121693">
-    <testcase classname="To validate flow of booking" name="To validate booking flow of room" time="26.214634">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="63.686472">
+    <testcase classname="To validate flow of booking" name="To validate booking flow of room" time="27.789116">
         <system-out><![CDATA[Given user should be on login page..........................................passed
 When user should give username and password.................................passed
 And user select "London",hotel,room type....................................passed
@@ -13,7 +13,7 @@ And user enter card no,card type,expmonth,expyear,cvv and click book........pass
 Then User should be in booking confirmation page............................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="To validate flow of booking" name="To validate booking flow of room 2" time="21.907059">
+    <testcase classname="To validate flow of booking" name="To validate booking flow of room 2" time="35.897356">
         <system-out><![CDATA[Given user should be on login page..........................................passed
 When user should give username and password.................................passed
 And user select "Melbourne",hotel,room type.................................passed

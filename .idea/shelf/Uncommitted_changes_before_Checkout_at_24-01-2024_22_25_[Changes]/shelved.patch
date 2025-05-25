@@ -1,0 +1,53 @@
+Index: src/test/java/org/run/RunnerClass.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.run;\r\n\r\nimport org.base.BaseClass;\r\nimport org.junit.runner.RunWith;\r\nimport org.junit.AfterClass;\r\n\r\nimport io.cucumber.junit.Cucumber;\r\nimport io.cucumber.junit.CucumberOptions;\r\n\r\n\r\n@RunWith(Cucumber.class)\r\n@CucumberOptions(features = \"src\\\\test\\\\resources\\\\Features\\\\Login.feature\",tags= \"@Test\",dryRun = false, monochrome = true,glue = \"org.step\",plugin = {\"junit:target\\\\Reports\\\\flows.xml\",\"pretty\",\"html:target\",\"json:target\\\\Reports\\\\output.json\"})\r\npublic class RunnerClass {\r\n\t@AfterClass\r\n\tpublic static void jvmreport() {\r\n\t BaseClass.generate(\"C:\\\\Users\\\\rider\\\\eclipse-workspace\\\\CucumberAdactNew\\\\target\\\\Reports\\\\output.json\");\r\n\t}\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/org/run/RunnerClass.java b/src/test/java/org/run/RunnerClass.java
+--- a/src/test/java/org/run/RunnerClass.java	
++++ b/src/test/java/org/run/RunnerClass.java	
+@@ -9,7 +9,7 @@
+ 
+ 
+ @RunWith(Cucumber.class)
+-@CucumberOptions(features = "src\\test\\resources\\Features\\Login.feature",tags= "@Test",dryRun = false, monochrome = true,glue = "org.step",plugin = {"junit:target\\Reports\\flows.xml","pretty","html:target","json:target\\Reports\\output.json"})
++@CucumberOptions(features = "src\\test\\resources\\Features\\Flow.feature",tags= "@Test1",dryRun = false, monochrome = true,glue = "org.step",plugin = {"junit:target\\Reports\\flows.xml","pretty","html:target","json:target\\Reports\\output.json"})
+ public class RunnerClass {
+ 	@AfterClass
+ 	public static void jvmreport() {
+Index: src/test/resources/Features/Flow.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: To validate flow of booking\r\nScenario Outline: To validate booking flow of room\r\nGiven user should be on login page\r\nWhen user should give username and password\r\n|siva090195|siva090195|\r\nAnd user select \"<location>\",hotel,room type\r\n|Hotel Creek|Hotel Sunshine|Hotel Hervey|Hotel Cornice|\r\n|Standard|Double|Deluxe|Super Deluxe|\r\nAnd no of rooms\r\n|1 - One|2 - Two|3 - Three|\r\nAnd user enter checkin,checkout\r\n|21/04/2021|\r\n|22/04/2021|\r\nAnd user enter adult, child and click\r\n|1 - One|2 - Two|\r\n|0 - None|1 - One|\r\n\r\nAnd user select hotel and click continue\r\n\r\nAnd user enter firstname,lastname,address\r\n|firstname|siva|\r\n|lastname|shanmugam|\r\n|address|495,east|\r\n\r\nAnd user enter card no,card type,expmonth,expyear,cvv and click book\r\n|cardno|type|month|year|cvv|\r\n|1234567890123456|VISA|June|2022|786|\r\n|7894561230123456|VISA|June|2021|786|\r\n\r\n\r\nThen User should be in booking confirmation page\r\nExamples:\r\n|location|\r\n|London|\r\n|Melbourne|\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/resources/Features/Flow.feature b/src/test/resources/Features/Flow.feature
+--- a/src/test/resources/Features/Flow.feature	
++++ b/src/test/resources/Features/Flow.feature	
+@@ -1,4 +1,6 @@
++@selenium
+ Feature: To validate flow of booking
++  @Test1
+ Scenario Outline: To validate booking flow of room
+ Given user should be on login page
+ When user should give username and password
+Index: target/test-classes/Features/Flow.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>Feature: To validate flow of booking\r\nScenario Outline: To validate booking flow of room\r\nGiven user should be on login page\r\nWhen user should give username and password\r\n|siva090195|siva090195|\r\nAnd user select \"<location>\",hotel,room type\r\n|Hotel Creek|Hotel Sunshine|Hotel Hervey|Hotel Cornice|\r\n|Standard|Double|Deluxe|Super Deluxe|\r\nAnd no of rooms\r\n|1 - One|2 - Two|3 - Three|\r\nAnd user enter checkin,checkout\r\n|21/04/2021|\r\n|22/04/2021|\r\nAnd user enter adult, child and click\r\n|1 - One|2 - Two|\r\n|0 - None|1 - One|\r\n\r\nAnd user select hotel and click continue\r\n\r\nAnd user enter firstname,lastname,address\r\n|firstname|siva|\r\n|lastname|shanmugam|\r\n|address|495,east|\r\n\r\nAnd user enter card no,card type,expmonth,expyear,cvv and click book\r\n|cardno|type|month|year|cvv|\r\n|1234567890123456|VISA|June|2022|786|\r\n|7894561230123456|VISA|June|2021|786|\r\n\r\n\r\nThen User should be in booking confirmation page\r\nExamples:\r\n|location|\r\n|London|\r\n|Melbourne|\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/test-classes/Features/Flow.feature b/target/test-classes/Features/Flow.feature
+--- a/target/test-classes/Features/Flow.feature	
++++ b/target/test-classes/Features/Flow.feature	
+@@ -1,4 +1,6 @@
++@selenium
+ Feature: To validate flow of booking
++  @Test1
+ Scenario Outline: To validate booking flow of room
+ Given user should be on login page
+ When user should give username and password

@@ -1,29 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="63.686472">
-    <testcase classname="To validate flow of booking" name="To validate booking flow of room" time="27.789116">
-        <system-out><![CDATA[Given user should be on login page..........................................passed
+<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="20.01115">
+    <testcase classname="To validate flow of booking" name="To validate booking flow of room" time="12.72925">
+        <failure message="java.io.FileNotFoundException: C:\Users\rider\eclipse-workspace\CucumberAdactNew\excel\New Microsoft Excel Worksheet.xlsx (The system cannot find the path specified)&#13;&#10;&#9;at java.base/java.io.FileInputStream.open0(Native Method)&#13;&#10;&#9;at java.base/java.io.FileInputStream.open(FileInputStream.java:219)&#13;&#10;&#9;at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;&#10;&#9;at org.base.BaseClass.excelread(BaseClass.java:346)&#13;&#10;&#9;at org.step.Flow.user_enter_checkin_checkout(Flow.java:70)&#13;&#10;&#9;at ✽.user enter checkin,checkout(file:src/test/resources/Features/Flow.feature:11)&#13;&#10;">
+            <![CDATA[Given user should be on login page..........................................passed
 When user should give username and password.................................passed
 And user select "London",hotel,room type....................................passed
 And no of rooms.............................................................passed
-And user enter checkin,checkout.............................................passed
-And user enter adult, child and click.......................................passed
-And user select hotel and click continue....................................passed
-And user enter firstname,lastname,address...................................passed
-And user enter card no,card type,expmonth,expyear,cvv and click book........passed
-Then User should be in booking confirmation page............................passed
-]]></system-out>
+And user enter checkin,checkout.............................................failed
+And user enter adult, child and click.......................................skipped
+And user select hotel and click continue....................................skipped
+And user enter firstname,lastname,address...................................skipped
+And user enter card no,card type,expmonth,expyear,cvv and click book........skipped
+Then User should be in booking confirmation page............................skipped
+
+StackTrace:
+java.io.FileNotFoundException: C:\Users\rider\eclipse-workspace\CucumberAdactNew\excel\New Microsoft Excel Worksheet.xlsx (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.base.BaseClass.excelread(BaseClass.java:346)
+	at org.step.Flow.user_enter_checkin_checkout(Flow.java:70)
+	at ✽.user enter checkin,checkout(file:src/test/resources/Features/Flow.feature:11)
+]]>
+        </failure>
     </testcase>
-    <testcase classname="To validate flow of booking" name="To validate booking flow of room 2" time="35.897356">
-        <system-out><![CDATA[Given user should be on login page..........................................passed
+    <testcase classname="To validate flow of booking" name="To validate booking flow of room 2" time="7.2819">
+        <failure message="java.io.FileNotFoundException: C:\Users\rider\eclipse-workspace\CucumberAdactNew\excel\New Microsoft Excel Worksheet.xlsx (The system cannot find the path specified)&#13;&#10;&#9;at java.base/java.io.FileInputStream.open0(Native Method)&#13;&#10;&#9;at java.base/java.io.FileInputStream.open(FileInputStream.java:219)&#13;&#10;&#9;at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)&#13;&#10;&#9;at org.base.BaseClass.excelread(BaseClass.java:346)&#13;&#10;&#9;at org.step.Flow.user_enter_checkin_checkout(Flow.java:70)&#13;&#10;&#9;at ✽.user enter checkin,checkout(file:src/test/resources/Features/Flow.feature:11)&#13;&#10;">
+            <![CDATA[Given user should be on login page..........................................passed
 When user should give username and password.................................passed
 And user select "Melbourne",hotel,room type.................................passed
 And no of rooms.............................................................passed
-And user enter checkin,checkout.............................................passed
-And user enter adult, child and click.......................................passed
-And user select hotel and click continue....................................passed
-And user enter firstname,lastname,address...................................passed
-And user enter card no,card type,expmonth,expyear,cvv and click book........passed
-Then User should be in booking confirmation page............................passed
-]]></system-out>
+And user enter checkin,checkout.............................................failed
+And user enter adult, child and click.......................................skipped
+And user select hotel and click continue....................................skipped
+And user enter firstname,lastname,address...................................skipped
+And user enter card no,card type,expmonth,expyear,cvv and click book........skipped
+Then User should be in booking confirmation page............................skipped
+
+StackTrace:
+java.io.FileNotFoundException: C:\Users\rider\eclipse-workspace\CucumberAdactNew\excel\New Microsoft Excel Worksheet.xlsx (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+	at org.base.BaseClass.excelread(BaseClass.java:346)
+	at org.step.Flow.user_enter_checkin_checkout(Flow.java:70)
+	at ✽.user enter checkin,checkout(file:src/test/resources/Features/Flow.feature:11)
+]]>
+        </failure>
     </testcase>
 </testsuite>

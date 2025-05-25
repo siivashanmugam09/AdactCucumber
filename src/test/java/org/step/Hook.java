@@ -20,6 +20,7 @@ public class Hook  extends BaseClass{
 	
 	@After
 	public void snap(io.cucumber.core.api.Scenario s) throws IOException {
+		quitBrowser();
 		String name = s.getName();
 		String replace = name.replace(" ", "_");
 		screenshot(replace);

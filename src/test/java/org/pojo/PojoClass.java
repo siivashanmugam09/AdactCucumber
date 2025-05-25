@@ -1,21 +1,20 @@
 package org.pojo;
 
 import org.base.BaseClass;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class PojoClass extends BaseClass {
 	public static PojoClass p;
+	WebDriver driver;
 public PojoClass() {
-	PageFactory.initElements(driver, this);	
-}
-public static PojoClass getInstance() {
-	if (p==null) {
-		p= new PojoClass();
-	}return p;
+	this.driver=BaseClass.driver;
+	PageFactory.initElements(driver, this);
 
 }
+
 @FindBy(name="username")
 private WebElement userid;
 @FindBy(name="password")

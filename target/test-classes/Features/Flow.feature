@@ -2,7 +2,7 @@ Feature: To validate flow of booking
 Scenario Outline: To validate booking flow of room
 Given user should be on login page
 When user should give username and password
-|siva090195|siva090195|
+|siva090195|0IL7CE|
 And user select "<location>",hotel,room type
 |Hotel Creek|Hotel Sunshine|Hotel Hervey|Hotel Cornice|
 |Standard|Double|Deluxe|Super Deluxe|

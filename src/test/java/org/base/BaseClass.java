@@ -36,6 +36,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -57,8 +58,9 @@ public class BaseClass {
 	public static ArrayList<String> a;
 
 	public static void launchBrowser() {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		WebDriverManager.edgedriver().setup();
+		driver = new EdgeDriver();
+
 	}
 
 	public static void loadUrl(String url) {
@@ -498,5 +500,8 @@ li.add(jsonpath);
 ReportBuilder r = new ReportBuilder(li, con);
 r.generateReports();
 
+	}
+	public static void quitBrowser(){
+		driver.quit();
 	}
 }

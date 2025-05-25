@@ -1,6 +1,7 @@
 package org.step;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,6 +10,9 @@ import java.util.concurrent.TimeUnit;
 import org.base.BaseClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.pojo.PojoClass;
 
 import io.cucumber.datatable.DataTable;
@@ -23,15 +27,15 @@ public class Flow extends BaseClass {
 	@Given("user should be on login page")
 	public void user_should_be_on_login_page() {
 		launchBrowser();
-		loadUrl("http://adactinhotelapp.com/index.php");
+		loadUrl("https://adactinhotelapp.com/index.php");
 	}
 
 	@When("user should give username and password")
 	public void user_should_give_username_and_password(DataTable d) throws IOException {
 		List<String> list = d.asList();
 		String pass = list.get(1);
-		Map<String, String> cred = excelread("TC_1");
-		String user = cred.get("Username");
+//		Map<String, String> cred = excelread("TC_1");
+		String user = list.get(0);
 		p = new PojoClass();
 		type(p.getUserid(), user);
 		type(p.getPass(), pass);
@@ -51,6 +55,7 @@ public class Flow extends BaseClass {
 		List<String> list1 = lists1.get(1);
 		String roomtype = list1.get(0);
 		selectValue(p.getRoom(), roomtype);
+
 
 	}
 
@@ -135,6 +140,7 @@ public class Flow extends BaseClass {
 	@Then("User should be in booking confirmation page")
 	public void user_should_be_in_booking_confirmation_page() throws InterruptedException {
 		Thread.sleep(10000);
+
 		if (driver.getCurrentUrl().contains("BookingConfirm")) {
 			WebElement findElement = driver.findElement(By.id("order_no"));
 			String attribute = findElement.getAttribute("value");
